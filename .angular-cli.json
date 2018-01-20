@@ -19,8 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "scr",
       "styles": [
-        "styles.scss",
-        "../node_modules/@scienceroot/design/theme/scienceroot-theme.css"
+        "styles.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
