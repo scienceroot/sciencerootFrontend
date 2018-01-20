@@ -1,28 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import {ScrMenuModule} from "./menu/menu.module";
-import {ScrUserCoreModule} from "@scienceroot/user";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ScrFooterModule} from "./footer/footer.module";
+import {RouterModule, Routes} from "@angular/router";
+import {ScrUserRoutesModule} from "@scienceroot/user";
 
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'user/new' }
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(routes),
     FlexLayoutModule,
-    AppRoutingModule,
+    ScrUserRoutesModule,
     ScrMenuModule,
-    ScrFooterModule,
-    ScrUserCoreModule
+    ScrFooterModule
+  ],
+  declarations: [
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
