@@ -205,13 +205,13 @@
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@schematics/schematics/-/schematics-0.0.13.tgz#f7eda5c7caab714f2675dca9cb8301a737acdba2"
 
-"@scienceroot/design@1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "http://npm.scienceroots.com/@scienceroot%2fdesign/-/design-1.0.0-beta.1.tgz#b136c6b3641c7c15113e4c90ffe7024972fe7274"
+"@scienceroot/design@1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "http://npm.scienceroots.com/@scienceroot%2fdesign/-/design-1.0.0-beta.2.tgz#ab68b0a106e8eac604a2316ed6e190bd9126b471"
 
-"@scienceroot/user@1.0.0-beta.1":
-  version "1.0.0-beta.1"
-  resolved "http://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.0-beta.1.tgz#e46219a3efd5e4571d1c5d1800aa964d74e5653b"
+"@scienceroot/user@1.0.0-beta.2":
+  version "1.0.0-beta.2"
+  resolved "http://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.0-beta.2.tgz#17a8dbec70b5c093df4f76b267ff8f90f14dc1b8"
 
 "@types/jasmine@*", "@types/jasmine@2.5.x":
   version "2.5.54"
