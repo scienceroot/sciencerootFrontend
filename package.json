@@ -24,8 +24,8 @@
     "@angular/platform-browser": "5.1.x",
     "@angular/platform-browser-dynamic": "5.1.x",
     "@angular/router": "5.1.x",
-    "@scienceroot/user": "1.0.0-beta.2",
-    "@scienceroot/design": "1.0.0-beta.2",
+    "@scienceroot/user": "1.0.0-beta.3",
+    "@scienceroot/design": "1.0.0-beta.3",
     "core-js": "2.5.x",
     "rxjs": "5.5.x",
     "zone.js": "0.8.x"
