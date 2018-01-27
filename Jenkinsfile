@@ -2,9 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('Installing modules') {
+            steps {
+                sh 'npm install'
+            }
+        }
         stage('Build') {
             steps {
-                echo 'Building..',
                 sh 'ng build --prod'
             }
         }
