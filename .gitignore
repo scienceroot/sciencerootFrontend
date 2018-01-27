@@ -3,7 +3,6 @@ dist/
 node_modules/
 out-tsc/
 
-.npmrc
 debug.log
 npm-debug.log
 src/**/*.js
