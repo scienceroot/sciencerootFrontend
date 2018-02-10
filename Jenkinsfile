@@ -1,7 +1,7 @@
 pipeline {
     agent {
       docker {
-        image 'scrfrontendbuild:master'
+        image 'scrfrontendbuild'
       }
     }
 
