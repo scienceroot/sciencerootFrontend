@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'ng build --prod'
+                sh './node_modules/.bin/ng build --prod'
             }
         }
     }
