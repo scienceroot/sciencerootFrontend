@@ -16,5 +16,11 @@ pipeline {
                 sh './node_modules/.bin/ng build --prod'
             }
         }
+
+        stage('Publish') {
+            steps {
+                sh "docker build --tag=scrfront:master ."
+            }
+        }
     }
 }
