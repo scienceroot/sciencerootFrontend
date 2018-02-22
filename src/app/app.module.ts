@@ -8,6 +8,10 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {ScrFooterModule} from "./footer/footer.module";
 import {RouterModule, Routes} from "@angular/router";
 import {ScrUserRoutesModule} from "@scienceroot/user";
+import {
+  ScrAuthenticationModule, ScrAuthenticationTokenStoreConfig,
+  ScrSecureHttpClientModule
+} from "@scienceroot/security";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'user/new' }
@@ -19,6 +23,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     FlexLayoutModule,
+    ScrAuthenticationModule,
+    ScrSecureHttpClientModule,
     ScrUserRoutesModule,
     ScrMenuModule,
     ScrFooterModule
@@ -29,4 +35,9 @@ const routes: Routes = [
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor() {
+    new ScrAuthenticationTokenStoreConfig('scrAuthToken').save();
+  }
+}
