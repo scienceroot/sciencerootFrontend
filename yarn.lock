@@ -207,8 +207,8 @@
   resolved "https://npm.scienceroots.com/@scienceroot%2fsecurity/-/security-1.0.7.tgz#56b92221361537a9496790c722b163bc7861d713"
 
 "@scienceroot/user@1.x.x":
-  version "1.0.1"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.1.tgz#ca4b66d8cd6b4edf3e301c4cf3647a3427d66081"
+  version "1.0.2"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.2.tgz#525e9712800e3268e2e1e73da68c46d0d6c41d6b"
 
 "@types/jasmine@*", "@types/jasmine@2.5.x":
   version "2.5.54"
