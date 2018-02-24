@@ -48,9 +48,9 @@ export class AppModule {
     ).save();
 
     new ScrUserStoreConfigModel(
-      'https://api.scienceroots/users',
-      'https://api.scienceroots/register',
-      'https://api.scienceroots/industries/'
+      'https://api.scienceroots.com/users',
+      'https://api.scienceroots.com/register',
+      'https://api.scienceroots.com/industries/'
     ).save();
   }
 }
