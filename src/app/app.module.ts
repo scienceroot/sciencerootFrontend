@@ -7,11 +7,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ScrFooterModule} from "./footer/footer.module";
 import {RouterModule, Routes} from "@angular/router";
-import {ScrUserRoutesModule} from "@scienceroot/user";
-import {
-  ScrAuthenticationModule, ScrAuthenticationTokenStoreConfig,
-  ScrSecureHttpClientModule
-} from "@scienceroot/security";
+import {ScrUserRoutesModule, ScrUserStoreConfigModel} from "@scienceroot/user";
+import {ScrAuthenticationModule, ScrAuthenticationStoreConfig, ScrSecureHttpClientModule} from "@scienceroot/security";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'user/new' }
@@ -38,6 +35,17 @@ const routes: Routes = [
 export class AppModule {
 
   constructor() {
-    new ScrAuthenticationTokenStoreConfig('scrAuthToken').save();
+    new ScrAuthenticationStoreConfig(
+      'scrAuthToken',
+      'https://api.scienceroots.com/register',
+      'https://api.scienceroots.com/login',
+      'https://api.scienceroots.com/token',
+    ).save();
+
+    new ScrUserStoreConfigModel(
+      'https://api.scienceroots/users',
+      'https://api.scienceroots/register',
+      'https://api.scienceroots/industries/'
+    ).save();
   }
 }
