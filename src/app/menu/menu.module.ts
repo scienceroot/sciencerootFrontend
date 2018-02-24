@@ -1,8 +1,13 @@
 import {NgModule} from "@angular/core";
 import {ScrMenuComponent} from "./menu.component";
+import {ScrUserDetailsLinkModule} from "@scienceroot/user";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 @NgModule({
-  imports: [],
+  imports: [
+    FlexLayoutModule,
+    ScrUserDetailsLinkModule
+  ],
   declarations: [
     ScrMenuComponent
   ],

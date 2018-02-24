@@ -7,7 +7,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ScrFooterModule} from "./footer/footer.module";
 import {RouterModule, Routes} from "@angular/router";
-import {ScrUserRoutesModule, ScrUserStoreConfigModel} from "@scienceroot/user";
+import {
+  ScrActiveUserModule, ScrUserRoutesModule,
+  ScrUserStoreConfigModel
+} from "@scienceroot/user";
 import {ScrAuthenticationModule, ScrAuthenticationStoreConfig, ScrSecureHttpClientModule} from "@scienceroot/security";
 
 const routes: Routes = [
@@ -22,6 +25,8 @@ const routes: Routes = [
     FlexLayoutModule,
     ScrAuthenticationModule,
     ScrSecureHttpClientModule,
+    ScrActiveUserModule,
+    ScrUserRoutesModule,
     ScrUserRoutesModule,
     ScrMenuModule,
     ScrFooterModule

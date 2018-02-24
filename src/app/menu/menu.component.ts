@@ -4,12 +4,18 @@ import {Component} from "@angular/core";
   selector: 'scr-menu',
   template: `
     <div class="menu">
-      <div class="logo-container">
+      <div  fxFlex="64px"
+            class="menu-item logo-container">
         <img src="assets/images/logo_only.svg" alt="Scienceroot" />
       </div>
-      <div fxLayout="row">
-        <div fxFlex="">
-          
+      <div  class="menu-item"
+            fxFlex="">
+        <div  fxLayout="row"
+              fxLayoutAlign="end center">
+          <div fxFlex="150px">
+            <scr-user-details-link>
+            </scr-user-details-link>
+          </div>
         </div>
       </div>
     </div>
