@@ -203,22 +203,22 @@
   resolved "https://npm.scienceroots.com/@scienceroot%2fdesign/-/design-1.0.0-beta.3.tgz#fd2dde34f3f13b114e0f66c4cb58a4fc48fb8bf5"
 
 "@scienceroot/search@1.x.x":
-  version "1.0.1"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.0.1.tgz#bb4b5eb6bc7ccdd822eb7d2b52995b47a801d7bd"
+  version "1.0.2"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.0.2.tgz#e8dec2be87f14c87da8106b1dec608250e9a9ebf"
 
 "@scienceroot/security@1.x.x":
   version "1.0.9"
   resolved "https://npm.scienceroots.com/@scienceroot%2fsecurity/-/security-1.0.9.tgz#56da3b5f36051f9c25cdc8ff7c7be1f57abe5fd8"
 
 "@scienceroot/user@1.x.x":
-  version "1.0.4"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.4.tgz#ad614f92c3ef624fe9dac7dc8f6eba796d266fb3"
+  version "1.0.5"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-1.0.5.tgz#4760af6b260f898af3e48c3878841dd422298eef"
   dependencies:
     "@scienceroot/wallet" "^1.0.3"
 
 "@scienceroot/wallet@1.x.x", "@scienceroot/wallet@^1.0.3":
-  version "1.0.3"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fwallet/-/wallet-1.0.3.tgz#02dc76ae25b6cd950878d30c9b521ec65efcd2f2"
+  version "1.0.4"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fwallet/-/wallet-1.0.4.tgz#d60edbad0e5d646ee583f592c3a94b8c2cd736bd"
   dependencies:
     web3 "0.x.x"
 

@@ -39,9 +39,9 @@ const routes: Routes = [
 })
 export class AppModule {
 
-  private host: string = 'https://api.scienceroots.com';
+  //private host: string = 'https://api.scienceroots.com';
 
-  //private host: string = 'http://localhost:8080';
+  private host: string = environment.host;
 
   constructor() {
 
