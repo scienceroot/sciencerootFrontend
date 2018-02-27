@@ -10,9 +10,11 @@ import {RouterModule, Routes} from "@angular/router";
 import {ScrActiveUserModule, ScrUserRoutesModule, ScrUserStoreConfigModel} from "@scienceroot/user";
 import {ScrAuthenticationModule, ScrAuthenticationStoreConfig, ScrSecureHttpClientModule} from "@scienceroot/security";
 import {ScrSearchRoutesModule, ScrSearchStoreConfigModel} from "@scienceroot/search";
+import {environment} from "../environments/environment";
+import {ScrWalletStoreConfig} from "@scienceroot/wallet";
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'user/new' }
+  { path: '', pathMatch: 'full', redirectTo: 'login' }
 ];
 
 @NgModule({
@@ -42,6 +44,7 @@ export class AppModule {
   //private host: string = 'http://localhost:8080';
 
   constructor() {
+
     new ScrAuthenticationStoreConfig(
       'scrAuthToken',
       `${this.host}/register`,
@@ -60,6 +63,18 @@ export class AppModule {
       `${this.host}/search`,
       `${this.host}/search/papers`,
       `${this.host}/search/users`
+    ).save();
+
+    new ScrUserStoreConfigModel(
+      `${this.host}/users`,
+      `${this.host}/register`,
+      `${this.host}/industries/`,
+      `${this.host}/interests/`,
+    ).save();
+
+    new ScrWalletStoreConfig(
+      `${this.host}/users`,
+      'publickey'
     ).save();
   }
 }
