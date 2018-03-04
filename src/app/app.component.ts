@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {Title} from "@angular/platform-browser";
+import {ScrAuthenticationLoginService} from "@scienceroot/security";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'scr-root',
@@ -31,7 +33,17 @@ export class AppComponent {
 
   public readonly title: string = 'Scienceroot';
 
-  constructor(private titleService: Title) {
-    this.titleService.setTitle(this.title);
+  constructor(
+    private _titleService: Title,
+    private _loginService: ScrAuthenticationLoginService,
+    private _router: Router
+  ) {
+    this._titleService.setTitle(this.title);
+
+    this._loginService.loginStateChanged.subscribe((authenticated: boolean) => {
+      if(authenticated) {
+        this._router.navigate(['/search'])
+      }
+    })
   }
 }

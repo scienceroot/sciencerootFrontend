@@ -14,7 +14,7 @@ import {environment} from "../environments/environment";
 import {ScrWalletStoreConfig} from "@scienceroot/wallet";
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'login' }
+  { path: '', pathMatch: 'full', redirectTo: 'search' }
 ];
 
 @NgModule({
