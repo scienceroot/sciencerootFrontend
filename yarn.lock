@@ -175,6 +175,10 @@
   dependencies:
     tslib "^1.7.1"
 
+"@bindoc/loading@1.x.x":
+  version "1.0.2"
+  resolved "https://npm.scienceroots.com/@bindoc%2floading/-/loading-1.0.2.tgz#65cacf8981f87ff5ded7d7a46b902c6c459dcd2b"
+
 "@ngtools/json-schema@1.1.0", "@ngtools/json-schema@^1.1.0":
   version "1.1.0"
   resolved "https://npm.scienceroots.com/@ngtools%2fjson-schema/-/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"
@@ -198,9 +202,11 @@
   dependencies:
     typescript "~2.6.2"
 
-"@scienceroot/design@1.0.0-beta.3":
-  version "1.0.0-beta.3"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fdesign/-/design-1.0.0-beta.3.tgz#fd2dde34f3f13b114e0f66c4cb58a4fc48fb8bf5"
+"@scienceroot/design@1.x.x":
+  version "1.0.3"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fdesign/-/design-1.0.3.tgz#0a1674cb0165ab74551862c649a652fe3c7e3f42"
+  dependencies:
+    "@bindoc/loading" "1.x.x"
 
 "@scienceroot/search@1.x.x":
   version "1.0.2"
