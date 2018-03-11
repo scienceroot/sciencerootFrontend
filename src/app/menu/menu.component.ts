@@ -16,7 +16,7 @@ import {NavigationEnd, Router} from "@angular/router";
       <div fxFlex="100px"
            fxFlexAlign="center"
            class="menu-item company-name">
-        <span class="mat-display-1">Scienceroot</span>
+        <span class="mat-headline">Scienceroot</span>
       </div>
       <div  class="menu-item"
             fxFlex="">
@@ -53,7 +53,10 @@ import {NavigationEnd, Router} from "@angular/router";
       height: 100%;
     }
     
-    .company-name { color: #fff; }
+    .company-name { 
+      color: #fff;
+      text-transform: uppercase;
+    }
   `]
 })
 export class ScrMenuComponent {
