@@ -1,4 +1,5 @@
 import {Component} from "@angular/core";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'scr-menu',
@@ -22,12 +23,11 @@ import {Component} from "@angular/core";
         <div  fxLayout="row"
               fxLayoutGap="24px"
               fxLayoutAlign="end center">
-          <div fxFlex="100px">
-            <a  mat-raised-button=""
-                color="accent"
-                [routerLink]="['/search']">
-              Search
-            </a> 
+          <div fxFlex="60%">
+            <ng-container *ngIf="showSearchHeader">
+              <scr-search-header>
+              </scr-search-header>
+            </ng-container>
           </div>
           <div fxFlex="150px">
             <scr-user-details-link>
@@ -58,4 +58,29 @@ import {Component} from "@angular/core";
 })
 export class ScrMenuComponent {
 
+  public showSearchHeader: boolean = true;
+
+  constructor(private router:Router) {
+    router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd ) {
+        this._onNavigationEnd(event);
+      }
+    });
+  }
+
+  private _onNavigationEnd(event: any) {
+    this.showSearchHeader = !this._isSearchRoute(event.url);
+  }
+
+  private _isSearchRoute(url = ''): boolean {
+    let isSearch: boolean;
+
+    if(url.indexOf('/search') !== -1) {
+      isSearch = true;
+    } else {
+      isSearch = false;
+    }
+
+    return isSearch;
+  }
 }
