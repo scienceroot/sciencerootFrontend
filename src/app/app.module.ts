@@ -52,13 +52,6 @@ export class AppModule {
       `${this.host}/token`,
     ).save();
 
-    new ScrUserStoreConfigModel(
-      `${this.host}/users`,
-      `${this.host}/register`,
-      `${this.host}/industries/`,
-      `${this.host}/interests/`
-    ).save();
-
     new ScrSearchStoreConfigModel(
       `${this.host}/search`,
       `${this.host}/search/papers`,
@@ -70,6 +63,7 @@ export class AppModule {
       `${this.host}/register`,
       `${this.host}/industries/`,
       `${this.host}/interests/`,
+      `${this.host}/search/languages/`
     ).save();
 
     new ScrWalletStoreConfig(

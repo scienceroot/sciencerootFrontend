@@ -3,12 +3,19 @@ import {Component} from "@angular/core";
 @Component({
   selector: 'scr-menu',
   template: `
-    <div class="menu">
+    <div  class="menu"
+          fxLayout="row"
+          fxLayoutGap="24px">
       <div  fxFlex="64px"
             class="menu-item logo-container">
         <img src="assets/images/logo_new.png" 
              alt="Scienceroot" 
               class="logo"/>
+      </div>
+      <div fxFlex="100px"
+           fxFlexAlign="center"
+           class="menu-item company-name">
+        <span class="mat-display-1">Scienceroot</span>
       </div>
       <div  class="menu-item"
             fxFlex="">
@@ -45,6 +52,8 @@ import {Component} from "@angular/core";
       width: 100%;
       height: 100%;
     }
+    
+    .company-name { color: #fff; }
   `]
 })
 export class ScrMenuComponent {

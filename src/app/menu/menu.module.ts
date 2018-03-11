@@ -4,13 +4,15 @@ import {ScrUserDetailsLinkModule} from "@scienceroot/user";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {RouterModule} from "@angular/router";
 import {MatButtonModule} from "@angular/material";
+import {ScrSearchHeaderModule} from "@scienceroot/search";
 
 @NgModule({
   imports: [
     RouterModule,
     FlexLayoutModule,
     MatButtonModule,
-    ScrUserDetailsLinkModule
+    ScrUserDetailsLinkModule,
+    ScrSearchHeaderModule
   ],
   declarations: [
     ScrMenuComponent
