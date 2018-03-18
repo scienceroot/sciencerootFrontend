@@ -40,7 +40,7 @@ import {NavigationEnd, Router} from "@angular/router";
   styles: [`
     .menu {
       padding: 8px 24px;
-      background-color: #0F0F1F;
+      background-color: #EFEFEF;
     }
     
     .logo-container {
@@ -54,7 +54,7 @@ import {NavigationEnd, Router} from "@angular/router";
     }
     
     .company-name { 
-      color: #fff;
+      color: rgba(0,0,0,0.87);
       text-transform: uppercase;
     }
   `]
