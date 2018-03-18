@@ -209,8 +209,8 @@
     "@bindoc/loading" "1.x.x"
 
 "@scienceroot/search@1.x.x":
-  version "1.1.0"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.1.0.tgz#1919cd53329319897a25623b15f666a431719b7a"
+  version "1.1.1"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.1.1.tgz#8f9a9a9825118c3e4746052ea36cff75b0dca870"
 
 "@scienceroot/security@1.x.x":
   version "1.0.11"
