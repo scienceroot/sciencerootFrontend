@@ -7,9 +7,10 @@ import {NavigationEnd, Router} from "@angular/router";
     <div  class="menu"
           fxLayout="row"
           fxLayoutGap="24px">
-      <div  fxFlex="64px"
+      <div  fxFlex="143px"
+            fxFlexAlign="center"
             class="menu-item logo-container">
-        <img src="assets/images/logo_new.png" 
+        <img src="assets/images/logo_text.png" 
              alt="Scienceroot" 
               class="logo"/>
       </div>
@@ -44,13 +45,12 @@ import {NavigationEnd, Router} from "@angular/router";
     }
     
     .logo-container {
-      height: 64px;
-      width: 48px;
+      height: 41px;
+      width: 143px;
     }
     
     .logo-container img {
       width: 100%;
-      height: 100%;
     }
     
     .company-name { 
