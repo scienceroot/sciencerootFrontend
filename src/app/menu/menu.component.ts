@@ -14,11 +14,6 @@ import {NavigationEnd, Router} from "@angular/router";
              alt="Scienceroot" 
               class="logo"/>
       </div>
-      <div fxFlex="100px"
-           fxFlexAlign="center"
-           class="menu-item company-name">
-        <span class="mat-headline">Scienceroot</span>
-      </div>
       <div  class="menu-item"
             fxFlex="">
         <div  fxLayout="row"
