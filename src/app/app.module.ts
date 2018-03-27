@@ -55,7 +55,8 @@ export class AppModule {
     new ScrSearchStoreConfigModel(
       `${this.host}/search`,
       `${this.host}/search/papers`,
-      `${this.host}/search/users`
+      `${this.host}/search/users`,
+      `${this.host}/search/preprints`
     ).save();
 
     new ScrUserStoreConfigModel(
