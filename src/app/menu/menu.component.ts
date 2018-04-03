@@ -10,9 +10,11 @@ import {NavigationEnd, Router} from "@angular/router";
       <div  fxFlex="143px"
             fxFlexAlign="center"
             class="menu-item logo-container">
-        <img src="assets/images/logo_text.png" 
-             alt="Scienceroot" 
-              class="logo"/>
+        <a [routerLink]="['search']">
+          <img src="assets/images/logo_text.png"
+               alt="Scienceroot"
+               class="logo"/>
+        </a>
       </div>
       <div  class="menu-item"
             fxFlex="">
