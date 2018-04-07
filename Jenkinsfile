@@ -11,11 +11,15 @@ pipeline {
                 sh 'yarn install'
             }
         }
-        stage('Build') {
+
             if(env.BRANCH_NAME == 'production') {
-                sh 'node_modules/.bin/ng build --prod'
+                stage('Build production') {
+                  sh 'node_modules/.bin/ng build --prod'
+                }
             } else {
-                sh 'node_modules/.bin/ng build --prod --environment staging'
+                stage('Build staging') {
+                  sh 'node_modules/.bin/ng build --prod --environment staging'
+                }
             }
         }
 
