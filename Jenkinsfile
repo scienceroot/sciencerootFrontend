@@ -20,7 +20,6 @@ pipeline {
         stage('Publish') {
             steps {
                 sh "docker build --tag=docker.scienceroots.com/scrfront:${env.BRANCH_NAME} ."
-                sh "docker push docker.scienceroots.com/scrfront:${env.BRANCH_NAME}"
             }
         }
     }
