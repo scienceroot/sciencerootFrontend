@@ -12,14 +12,14 @@ pipeline {
             }
         }
 
-        if(env.BRANCH_NAME == 'production') {
-            stage('Build production') {
-              sh 'node_modules/.bin/ng build --prod'
+        stage('Build') {
+          script {
+            if(env.BRANCH_NAME == 'production') {
+                  sh 'node_modules/.bin/ng build --prod'
+            } else {
+                  sh 'node_modules/.bin/ng build --prod --environment staging'
             }
-        } else {
-            stage('Build staging') {
-              sh 'node_modules/.bin/ng build --prod --environment staging'
-            }
+          }
         }
 
         stage('Publish') {
