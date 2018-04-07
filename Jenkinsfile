@@ -12,12 +12,10 @@ pipeline {
             }
         }
         stage('Build') {
-            steps {
-                if(env.BRANCH_NAME == 'production') {
-                    sh 'node_modules/.bin/ng build --prod'
-                } else {
-                    sh 'node_modules/.bin/ng build --prod --environment staging'
-                }
+            if(env.BRANCH_NAME == 'production') {
+                sh 'node_modules/.bin/ng build --prod'
+            } else {
+                sh 'node_modules/.bin/ng build --prod --environment staging'
             }
         }
 
