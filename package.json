@@ -27,8 +27,8 @@
     "@scienceroot/design": "1.x.x",
     "@scienceroot/search": "1.x.x",
     "@scienceroot/security": "1.x.x",
-    "@scienceroot/user": "1.x.x",
-    "@scienceroot/wallet": "1.x.x",
+    "@scienceroot/user": "2.x.x",
+    "@scienceroot/wallet": "2.x.x",
     "core-js": "2.5.x",
     "rxjs": "5.5.x",
     "zone.js": "0.8.x"
