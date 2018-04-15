@@ -21,9 +21,7 @@
       "styles": [
         "styles.scss"
       ],
-      "scripts": [
-        "scripts/web3.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
