@@ -29,10 +29,10 @@
     "@scienceroot/security": "1.x.x",
     "@scienceroot/user": "2.x.x",
     "@scienceroot/wallet": "2.x.x",
+    "@waves/waves-api": "0.28.x",
     "core-js": "2.5.x",
     "rxjs": "5.5.x",
     "tslib": "1.x.x",
-    "@waves/waves-api": "0.28.x",
     "zone.js": "0.8.x"
   },
   "devDependencies": {

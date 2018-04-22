@@ -223,16 +223,16 @@
     "@bindoc/loading" "1.x.x"
 
 "@scienceroot/search@1.x.x":
-  version "1.2.4"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.2.4.tgz#b91062419c11bbe03a2f6e581401dc6bd9e17b3a"
+  version "1.2.5"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.2.5.tgz#0e0b6ddb80b2a84e82d698127c62b336b36daf56"
 
 "@scienceroot/security@1.x.x":
   version "1.0.11"
   resolved "https://npm.scienceroots.com/@scienceroot%2fsecurity/-/security-1.0.11.tgz#b09a69519d373f01daef730973effa1ece4438f4"
 
 "@scienceroot/user@2.x.x":
-  version "2.0.2"
-  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-2.0.2.tgz#e708d12789569ca010e3d39ad2c4adb88dfdea64"
+  version "2.0.3"
+  resolved "https://npm.scienceroots.com/@scienceroot%2fuser/-/user-2.0.3.tgz#b81df861e3286ae9b34f7fa3d6572b05fe62fdea"
 
 "@scienceroot/wallet@2.x.x":
   version "2.0.4"
