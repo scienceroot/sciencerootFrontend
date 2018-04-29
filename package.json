@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "5.x.x",
     "@angular/router": "5.x.x",
     "@scienceroot/design": "1.x.x",
+    "@scienceroot/feed": "1.x.x",
     "@scienceroot/search": "1.x.x",
     "@scienceroot/security": "1.x.x",
     "@scienceroot/user": "2.x.x",

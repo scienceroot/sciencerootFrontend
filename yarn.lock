@@ -222,6 +222,12 @@
   dependencies:
     "@bindoc/loading" "1.x.x"
 
+"@scienceroot/feed@1.x.x":
+  version "1.0.1"
+  resolved "https://npm.scienceroots.com/@scienceroot%2ffeed/-/feed-1.0.1.tgz#ed160fedddb32ebea2d9e76641a7b5051f41c987"
+  dependencies:
+    tslib "^1.7.1"
+
 "@scienceroot/search@1.x.x":
   version "1.2.5"
   resolved "https://npm.scienceroots.com/@scienceroot%2fsearch/-/search-1.2.5.tgz#0e0b6ddb80b2a84e82d698127c62b336b36daf56"
