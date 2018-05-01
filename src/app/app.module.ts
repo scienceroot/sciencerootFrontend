@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {ScrFeedStoreConfig} from '@scienceroot/feed';
 import {AppComponent} from './app.component';
 import {ScrMenuModule} from "./menu/menu.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
@@ -44,6 +44,7 @@ export class AppModule {
   private host: string = environment.host;
 
   constructor() {
+    new ScrFeedStoreConfig(`${this.host}/posts/`).save();
 
     new ScrAuthenticationStoreConfig(
       'scrAuthToken',
