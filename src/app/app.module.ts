@@ -1,34 +1,43 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {ScrFeedStoreConfig} from '@scienceroot/feed';
 import {AppComponent} from './app.component';
-import {ScrMenuModule} from "./menu/menu.module";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {FlexLayoutModule} from "@angular/flex-layout";
-import {ScrFooterModule} from "./footer/footer.module";
-import {RouterModule, Routes} from "@angular/router";
-import {ScrActiveUserModule, ScrUserRoutesModule, ScrUserStoreConfigModel} from "@scienceroot/user";
-import {ScrAuthenticationModule, ScrAuthenticationStoreConfig, ScrSecureHttpClientModule} from "@scienceroot/security";
-import {ScrSearchRoutesModule, ScrSearchStoreConfigModel} from "@scienceroot/search";
-import {environment} from "../environments/environment";
-import {ScrWalletStoreConfig} from "@scienceroot/wallet";
+import {ScrMenuModule} from './menu/menu.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {ScrFooterModule} from './footer/footer.module';
+import {ScrActiveUserModule, ScrUserRoutesModule, ScrUserStoreConfigModel} from '@scienceroot/user';
+import {
+  ScrAuthenticationGuard,
+  ScrAuthenticationModule,
+  ScrAuthenticationStoreConfig,
+  ScrSecureHttpClientModule
+} from '@scienceroot/security';
+import {ScrSearchRoutesModule, ScrSearchStoreConfigModel} from '@scienceroot/search';
+import {environment} from '../environments/environment';
+import {ScrWalletStoreConfig} from '@scienceroot/wallet';
+import {ScrNewsfeedComponent} from './newsfeed/newsfeed.component';
+import {ScrNewsfeedModule} from './newsfeed/newsfeed.module';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'search' }
+  {path: '', pathMatch: 'full', redirectTo: 'search'},
+  {path: 'collection', component: ScrNewsfeedComponent, canActivate: [ScrAuthenticationGuard]}
 ];
 
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
     FlexLayoutModule,
+    RouterModule.forRoot(routes),
     ScrAuthenticationModule,
     ScrSecureHttpClientModule,
     ScrActiveUserModule,
     ScrUserRoutesModule,
     ScrSearchRoutesModule,
     ScrMenuModule,
+    ScrNewsfeedModule,
     ScrFooterModule
   ],
   declarations: [
@@ -39,37 +48,35 @@ const routes: Routes = [
 })
 export class AppModule {
 
-  //private host: string = 'https://api.scienceroots.com';
-
-  private host: string = environment.host;
-
   constructor() {
-    new ScrFeedStoreConfig(`${this.host}/posts/`).save();
+    const host: string = environment.host;
+
+    new ScrFeedStoreConfig(`${host}/posts/`).save();
 
     new ScrAuthenticationStoreConfig(
       'scrAuthToken',
-      `${this.host}/register`,
-      `${this.host}/login`,
-      `${this.host}/token`,
+      `${host}/register`,
+      `${host}/login`,
+      `${host}/token`,
     ).save();
 
     new ScrSearchStoreConfigModel(
-      `${this.host}/search`,
-      `${this.host}/search/papers`,
-      `${this.host}/search/users`,
-      `${this.host}/search/preprints`
+      `${host}/search`,
+      `${host}/search/papers`,
+      `${host}/search/users`,
+      `${host}/search/preprints`
     ).save();
 
     new ScrUserStoreConfigModel(
-      `${this.host}/users`,
-      `${this.host}/register`,
-      `${this.host}/industries/`,
-      `${this.host}/interests/`,
-      `${this.host}/search/languages/`
+      `${host}/users`,
+      `${host}/register`,
+      `${host}/industries/`,
+      `${host}/interests/`,
+      `${host}/search/languages/`
     ).save();
 
     new ScrWalletStoreConfig(
-      `${this.host}/users`,
+      `${host}/users`,
       'publickey'
     ).save();
   }
