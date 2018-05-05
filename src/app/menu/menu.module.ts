@@ -5,6 +5,7 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {RouterModule} from "@angular/router";
 import {MatButtonModule} from "@angular/material";
 import {ScrSearchHeaderModule} from "@scienceroot/search";
+import {ScrCollectionFeedLinkModule} from '@scienceroot/feed';
 import {CommonModule} from "@angular/common";
 
 @NgModule({
@@ -14,7 +15,8 @@ import {CommonModule} from "@angular/common";
     FlexLayoutModule,
     MatButtonModule,
     ScrUserDetailsLinkModule,
-    ScrSearchHeaderModule
+    ScrSearchHeaderModule,
+    ScrCollectionFeedLinkModule
   ],
   declarations: [
     ScrMenuComponent

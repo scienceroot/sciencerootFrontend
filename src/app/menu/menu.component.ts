@@ -1,5 +1,6 @@
 import {Component} from "@angular/core";
 import {NavigationEnd, Router} from "@angular/router";
+import {ScrAuthenticationLoginService} from '@scienceroot/security';
 
 @Component({
   selector: 'scr-menu',
@@ -21,13 +22,18 @@ import {NavigationEnd, Router} from "@angular/router";
         <div  fxLayout="row"
               fxLayoutGap="24px"
               fxLayoutAlign="end center">
-          <div fxFlex="60%">
+          <div fxFlex="">
             <ng-container *ngIf="showSearchHeader">
               <scr-search-header>
               </scr-search-header>
             </ng-container>
           </div>
-          <div fxFlex="150px">
+          <div  fxFlex="75px"
+                *ngIf="isAuthenticated">
+            <scr-collection-feed-link>
+            </scr-collection-feed-link>
+          </div>
+          <div fxFlex="75px">
             <scr-user-details-link>
             </scr-user-details-link>
           </div>
@@ -49,38 +55,32 @@ import {NavigationEnd, Router} from "@angular/router";
     .logo-container img {
       width: 100%;
     }
-    
-    .company-name { 
-      color: rgba(0,0,0,0.87);
-      text-transform: uppercase;
-    }
   `]
 })
 export class ScrMenuComponent {
 
   public showSearchHeader: boolean = true;
+  public isAuthenticated: boolean = false;
 
-  constructor(private router:Router) {
-    router.events.subscribe((event: any) => {
+  constructor(
+    private _router: Router,
+    private _loginService: ScrAuthenticationLoginService
+  ) {
+    this._router.events.subscribe((event: any) => {
       if (event instanceof NavigationEnd ) {
         this._onNavigationEnd(event);
       }
     });
+
+    this._loginService.loginStateChanged
+      .subscribe(newState => this.isAuthenticated = newState);
   }
 
   private _onNavigationEnd(event: any) {
     this.showSearchHeader = !this._isSearchRoute(event.url);
   }
 
-  private _isSearchRoute(url = ''): boolean {
-    let isSearch: boolean;
-
-    if(url.indexOf('/search') !== -1) {
-      isSearch = true;
-    } else {
-      isSearch = false;
-    }
-
-    return isSearch;
+  private _isSearchRoute(url: string = ''): boolean {
+    return url.indexOf('/search') !== -1;
   }
 }
