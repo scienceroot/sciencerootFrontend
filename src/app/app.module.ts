@@ -54,10 +54,8 @@ export class AppModule {
     new ScrFeedStoreConfig(`${host}/posts/`).save();
 
     new ScrAuthenticationStoreConfig(
-      'scrAuthToken',
-      `${host}/register`,
-      `${host}/login`,
-      `${host}/token`,
+      host,
+      'scrAuthToken'
     ).save();
 
     new ScrSearchStoreConfigModel(
