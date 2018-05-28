@@ -3935,18 +3935,15 @@ next-tick@1:
   version "1.0.0"
   resolved "https://npm.scienceroots.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
 
-ngx-clipboard@^11.1.0:
-  version "11.1.0"
-  resolved "https://npm.scienceroots.com/ngx-clipboard/-/ngx-clipboard-11.1.0.tgz#76a0a2625e39bf312acbc9dd53a6f882f9bc0288"
+ngx-clipboard@10.x.x:
+  version "10.0.0"
+  resolved "https://npm.scienceroots.com/ngx-clipboard/-/ngx-clipboard-10.0.0.tgz#1facba48db2ffe72f0f7975a50ad6abe1429373a"
   dependencies:
-    ngx-window-token "^1.0.0"
-    tslib "^1.9.0"
+    ngx-window-token "0.0.4"
 
-ngx-window-token@^1.0.0:
-  version "1.0.0"
-  resolved "https://npm.scienceroots.com/ngx-window-token/-/ngx-window-token-1.0.0.tgz#12acb174fbbcffa5c60b3fea5a6ea78cc3304793"
-  dependencies:
-    tslib "^1.9.0"
+ngx-window-token@0.0.4:
+  version "0.0.4"
+  resolved "https://npm.scienceroots.com/ngx-window-token/-/ngx-window-token-0.0.4.tgz#47e7aaa465411c4ab5f7ba17601bc593c956c736"
 
 no-case@^2.2.0:
   version "2.3.2"
