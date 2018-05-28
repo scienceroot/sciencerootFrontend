@@ -32,6 +32,7 @@
     "@scienceroot/wallet": "3.x.x",
     "@waves/waves-api": "0.28.x",
     "core-js": "2.5.x",
+    "ngx-clipboard": "^11.1.0",
     "rxjs": "5.5.x",
     "tslib": "1.x.x",
     "zone.js": "0.8.x"
