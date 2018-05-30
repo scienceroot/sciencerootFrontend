@@ -19,10 +19,13 @@ import {environment} from '../environments/environment';
 import {ScrWalletStoreConfig} from '@scienceroot/wallet';
 import {ScrNewsfeedComponent} from './newsfeed/newsfeed.component';
 import {ScrNewsfeedModule} from './newsfeed/newsfeed.module';
+import {PrivacyComponent} from './privacy/privacy.component';
+import { PrivacyModule } from './privacy/privacy.module';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'search'},
-  {path: 'collection', component: ScrNewsfeedComponent, canActivate: [ScrAuthenticationGuard]}
+  {path: 'collection', component: ScrNewsfeedComponent, canActivate: [ScrAuthenticationGuard]},
+  {path: 'privacy', component: PrivacyComponent}
 ];
 
 @NgModule({
@@ -38,7 +41,8 @@ const routes: Routes = [
     ScrSearchRoutesModule,
     ScrMenuModule,
     ScrNewsfeedModule,
-    ScrFooterModule
+    ScrFooterModule,
+    PrivacyModule
   ],
   declarations: [
     AppComponent

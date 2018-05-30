@@ -14,9 +14,10 @@ import { Component } from '@angular/core';
                 fxLayoutAlign="end">
             <div  fxFlex="100px"
                   fxFlexAlign="center">
-              <button mat-button="">
-                Impressum
-              </button>
+              <a  mat-button=""
+                  [routerLink]="['/privacy']">
+                Privacy Policies
+              </a>
             </div>
           </div>
         </div>
