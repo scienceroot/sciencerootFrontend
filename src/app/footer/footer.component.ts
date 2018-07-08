@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
         </div>
         <div fxFlex="">
           <div  fxLayout="row"
-                fxLayoutAlign="end">
+                fxLayoutAlign="start">
             <div  fxFlex="100px"
                   fxFlexAlign="center">
               <a  mat-button=""
