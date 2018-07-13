@@ -30,6 +30,25 @@ import {ScrAuthenticationLoginService} from '@scienceroot/security';
           </div>
           <div  fxFlex="75px"
                 *ngIf="isAuthenticated">
+            <div  class="link"
+                  [routerLink]="['/repositories']">
+              <div class="content">
+                <div  fxLayout="row"
+                      fxLayoutAlign="center">
+                  <div fxFlex="24px">
+                    <mat-icon>file_copy</mat-icon>
+                  </div>
+                </div>
+                <div class="text">
+                  <span class="">Repositories</span>
+                </div>
+              </div>
+              <div class="highlight-bar">
+              </div>
+            </div>
+          </div>
+          <div  fxFlex="75px"
+                *ngIf="isAuthenticated">
             <scr-collection-feed-link>
             </scr-collection-feed-link>
           </div>
@@ -54,6 +73,29 @@ import {ScrAuthenticationLoginService} from '@scienceroot/security';
     
     .logo-container img {
       width: 100%;
+    }
+
+    .link {
+      cursor: pointer;
+      height: 64px;
+      outline: none;
+      color: #fff;
+    }
+    .link .content {
+      height: 40px;
+      padding: 10px 0;
+    }
+
+    .link .content .text {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 10px;
+    }
+
+    .link .highlight-bar {
+      display: none;
+      height: 4px;
+      background-color: #fff;
     }
   `]
 })

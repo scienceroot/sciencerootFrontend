@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {ScrFeedStoreConfig} from '@scienceroot/feed';
+import {ScrRepositoryRoutesModule, ScrRepositoryStoreConfig} from '@scienceroot/repository';
 import {AppComponent} from './app.component';
 import {ScrMenuModule} from './menu/menu.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -39,6 +40,7 @@ const routes: Routes = [
     ScrActiveUserModule,
     ScrUserRoutesModule,
     ScrSearchRoutesModule,
+    ScrRepositoryRoutesModule,
     ScrMenuModule,
     ScrNewsfeedModule,
     ScrFooterModule,
@@ -56,6 +58,8 @@ export class AppModule {
     const host: string = environment.host;
 
     new ScrFeedStoreConfig(`${host}/posts/`).save();
+
+    new ScrRepositoryStoreConfig(`${host}/repositories/`).save();
 
     new ScrAuthenticationStoreConfig(
       host,

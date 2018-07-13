@@ -3,7 +3,7 @@ import {ScrMenuComponent} from "./menu.component";
 import {ScrUserDetailsLinkModule} from "@scienceroot/user";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {RouterModule} from "@angular/router";
-import {MatButtonModule} from "@angular/material";
+import {MatButtonModule, MatIconModule} from '@angular/material';
 import {ScrSearchHeaderModule} from "@scienceroot/search";
 import {ScrCollectionFeedLinkModule} from '@scienceroot/feed';
 import {CommonModule} from "@angular/common";
@@ -14,6 +14,7 @@ import {CommonModule} from "@angular/common";
     RouterModule,
     FlexLayoutModule,
     MatButtonModule,
+    MatIconModule,
     ScrUserDetailsLinkModule,
     ScrSearchHeaderModule,
     ScrCollectionFeedLinkModule
