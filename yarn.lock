@@ -229,8 +229,8 @@
     tslib "^1.7.1"
 
 "@scienceroot/repository@1.x.x":
-  version "1.1.1"
-  resolved "https://npm.scienceroots.com/@scienceroot%2frepository/-/repository-1.1.1.tgz#7a8176465999d6178fe003f8b976691a76fb3067"
+  version "1.2.0"
+  resolved "https://npm.scienceroots.com/@scienceroot%2frepository/-/repository-1.2.0.tgz#08f0e8937dd953b66a3de2e627dbf6c8d5962538"
   dependencies:
     tslib "^1.7.1"
 
