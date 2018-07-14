@@ -35,6 +35,7 @@
     "core-js": "2.5.x",
     "ngx-clipboard": "10.x.x",
     "rxjs": "5.5.x",
+    "showdown": "1.x.x",
     "tslib": "1.x.x",
     "zone.js": "0.8.x"
   },
