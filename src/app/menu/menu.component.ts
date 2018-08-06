@@ -28,8 +28,7 @@ import {ScrAuthenticationLoginService} from '@scienceroot/security';
               </scr-search-header>
             </ng-container>
           </div>
-          <div  fxFlex="75px"
-                *ngIf="isAuthenticated">
+          <div  fxFlex="75px">
             <div  class="link"
                   [routerLink]="['/repositories']">
               <div class="content">
